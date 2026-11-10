@@ -1,0 +1,9 @@
+[catalog.mattermost]
+name = "Mattermost"
+category = "chat"
+
+[templates.mattermost]
+input_path = "theme.json"
+output_path = "$XDG_CACHE_HOME/noctalia/mattermost-theme.json"
+post_hook = "python3 '{{ config_dir }}/apply.py'"
+undo_hook = "python3 '{{ config_dir }}/apply.py' undo"
